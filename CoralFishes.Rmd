@@ -1,6 +1,6 @@
 ---
 title: "Comparison of morphometric methods with R"
-author: "M. Quitzau, R. Frelat, V. Bonhomme, C. Möllmann, L. Nagelkerke & S. Bejarano"
+author: "M. Quitzau, R. Frelat, V. Bonhomme, C. Möllmann, L. Nagelkerke and S. Bejarano"
 date: "3rd June 2020"
 output: html_document
 ---
