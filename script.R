@@ -2,7 +2,7 @@
 # introduction to morphometric analyses 
 # and the comparison of methods on coral reef fish
 # By M. Quitzau, R. Frelat, V. Bonhomme
-# Last update: 23rd June 2020
+# Last update: 26th June 2020
 
 # For more information, see https://rfrelat.github.io/CoralFishes.html
 
@@ -54,6 +54,10 @@ stack(ldkPro, title="after")
 # Compute PCA for the landmarks coordinates  
 pcaLA <- PCA(ldkPro)
 
+#adjust sign of PC2
+pcaLA$x[,2]<- -pcaLA$x[,2]
+pcaLA$rotation[,2]<- -pcaLA$rotation[,2]
+
 # Visualize the morphological space defined by PC1 and PC2
 plot(pcaLA, col=colF, cex=1.3)
 
@@ -90,6 +94,9 @@ pcaOA <- PCA(fish_efa)
 #adjust sign of PC1
 pcaOA$x[,1]<- -pcaOA$x[,1]
 pcaOA$rotation[,1]<- -pcaOA$rotation[,1]
+#adjust sign of PC3
+pcaOA$x[,3]<- -pcaOA$x[,3]
+pcaOA$rotation[,3]<- -pcaOA$rotation[,3]
 
 #Visualize the morphospace
 plot(pcaOA, col=colF, cex = 1.5, 
