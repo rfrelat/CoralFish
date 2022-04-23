@@ -2,7 +2,7 @@
 # introduction to morphometric analyses 
 # and the comparison of methods on coral reef fish
 # By M. Quitzau, R. Frelat, V. Bonhomme
-# Last update: 26th June 2020
+# Last update: 23rd April 2022
 
 # For more information, see https://rfrelat.github.io/CoralFishes.html
 
@@ -27,7 +27,8 @@ traitsonly <- traits[, 3:15]
 names(traitsonly)
 
 # Run a PCA on the traits
-pcaTM   <- PCA(traitsonly)
+# pcaTM   <- PCA(traitsonly) # old version
+pcaTM   <- as_PCA(prcomp(scale(traitsonly)), fac = NULL)
 # Visualize the morphospace
 plot(pcaTM, col=colF, cex=1.3)
 
